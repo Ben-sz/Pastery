@@ -13,6 +13,7 @@ export class HerobuilderComponent implements OnInit {
   
   constructor() {
     this.bgOpacity= 50;
+    
    }
 
   ngOnInit(): void {
