@@ -9,18 +9,31 @@ import { Component, OnInit } from '@angular/core';
 export class HerobuilderComponent implements OnInit {
 
   bgOpacity: number;
+  horizontalPadding: number;
+  verticalPadding: number;
   bgColorCode: string;
   
   constructor() {
     this.bgOpacity= 50;
-    
+    this.horizontalPadding= 5;
+    this.verticalPadding= 50;
+
    }
 
   ngOnInit(): void {
   }
 
 
-  onInputChange(event) {
+  bgOpacityChange(event) {
     this.bgOpacity = event.value;
+  }
+
+
+  vPaddingChange(event) {
+    this.verticalPadding = event.value;
+  }
+
+  hPaddingChange(event) {
+    this.horizontalPadding = event.value;
   }
 }

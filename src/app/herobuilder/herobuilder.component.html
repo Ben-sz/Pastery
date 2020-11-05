@@ -3,9 +3,15 @@
   <div class="hero-container">
 
   
-    <div class="box hero-layer"  [ngStyle]="{'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')'}">
+    <div class="box hero-layer"
+      [ngStyle]="{
+                   'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')'
+                  }"
+      >
 
-      <div class="hero-text" >
+      <div class="hero-text"  [ngStyle]="{
+        'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px '
+       }">
         Serenity
       </div>
     </div>
@@ -19,30 +25,56 @@
 
 <div class="input-wrapper">
 
-  <div class="input-form">
-    Opacity
-    <mat-slider
-      [(ngModel)]="bgOpacity"
-      min="0" max="100" step="1"
-      (input)="onInputChange($event)"
-    ></mat-slider>
-
-    <div class="inlinetext">
-      {{bgOpacity}} %
+  <div class="input-left">
+    <div class="input-form">
+      <div class="input-title">
+       Opacity
+      </div>
+      <mat-slider
+        [(ngModel)]="bgOpacity"
+        min="0" max="100" step="1"
+        (input)="bgOpacityChange($event)"
+      ></mat-slider>
+  
+      <div class="inlinetext">
+        {{bgOpacity}} %
+      </div>
     </div>
-  </div>
-
-  <div class="input-form">
-    Opacity
-    <mat-slider
-    [(ngModel)]="bgOpacity"
-    min="0" max="100" step="1"
-    (input)="onInputChange($event)"
-    ></mat-slider>
-    <div class="inlinetext">
-      {{bgOpacity}} %
+  
+    <div class="input-form">
+      <div class="input-title">
+        Vertical padding
+      </div>
+      <mat-slider
+      [(ngModel)]="verticalPadding"
+      min="0" max="200" step="1"
+      (input)="vPaddingChange($event)"
+      ></mat-slider>
+      <div class="inlinetext">
+        {{verticalPadding}} px
+      </div>
     </div>
+  
+    <div class="input-form">
+      <div class="input-title">
+        Horizontal padding
+      </div>
+      <mat-slider
+      [(ngModel)]="horizontalPadding"
+      min="0" max="200" step="1"
+      (input)="hPaddingChange($event)"
+      ></mat-slider>
+      <div class="inlinetext">
+        {{horizontalPadding}} px
+      </div>
+    </div>
+
   </div>
+ 
+
+  <!-- background color -->
+  <!-- input text -->
+  <!-- input boxsize -->
 
 
 </div>
