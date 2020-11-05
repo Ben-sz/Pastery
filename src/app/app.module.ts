@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HerobuilderComponent } from './herobuilder/herobuilder.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+import { ColorPickerModule } from 'ngx-color-picker';
+
 
 
 
@@ -23,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
-    FormsModule
+    FormsModule,
+    ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

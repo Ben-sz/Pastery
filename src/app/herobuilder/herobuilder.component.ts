@@ -11,12 +11,14 @@ export class HerobuilderComponent implements OnInit {
   bgOpacity: number;
   horizontalPadding: number;
   verticalPadding: number;
-  bgColorCode: string;
+
+  bgColor: string;
   
   constructor() {
     this.bgOpacity= 50;
     this.horizontalPadding= 5;
     this.verticalPadding= 50;
+    this.bgColor = '#000000cf';
 
    }
 
@@ -35,5 +37,10 @@ export class HerobuilderComponent implements OnInit {
 
   hPaddingChange(event) {
     this.horizontalPadding = event.value;
+  }
+
+
+  onChangeColor(color: string): void {
+    console.log('Color changed:', color);
   }
 }
