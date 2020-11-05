@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-herobuilder',
   templateUrl: './herobuilder.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HerobuilderComponent implements OnInit {
 
-  constructor() { }
+  bgOpacity: number;
+  bgColorCode: string;
+  
+  constructor() {
+    this.bgOpacity= 50;
+   }
 
   ngOnInit(): void {
   }
 
+
+  onInputChange(event) {
+    this.bgOpacity = event.value;
+  }
 }

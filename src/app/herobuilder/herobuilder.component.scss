@@ -11,10 +11,6 @@
    position: relative;
 
   .box{
-    position: absolute;
-        top: 0;
-        left: 0;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,10 +19,10 @@
   .hero-layer{
     background-size: cover!important;
     width: 100%;
-    height: 250px; 
+    height: 400px; 
     background-image:   url("../../assets/cow-hero.jpg");
-    background-color: hsla(161, 34%, 0%, 0.52);
-    background-blend-mode: darken;
+/*     background-color: rgba(0, 0, 0, 0.699);
+ */    background-blend-mode: darken;
     
     background-clip: border-box;
     background-position-x: 50%;
@@ -51,5 +47,15 @@
 }
 
 
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.inlinetext{
+  display: inline;
+  width: 30px;
+}
 

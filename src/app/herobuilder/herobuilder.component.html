@@ -3,9 +3,9 @@
   <div class="hero-container">
 
   
-    <div class="box hero-layer">
+    <div class="box hero-layer"  [ngStyle]="{'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')'}">
 
-      <div class="hero-text">
+      <div class="hero-text" >
         Serenity
       </div>
     </div>
@@ -14,6 +14,35 @@
   </div>
 
 
-  
+
+</div>
+
+<div class="input-wrapper">
+
+  <div class="input-form">
+    Opacity
+    <mat-slider
+      [(ngModel)]="bgOpacity"
+      min="0" max="100" step="1"
+      (input)="onInputChange($event)"
+    ></mat-slider>
+
+    <div class="inlinetext">
+      {{bgOpacity}} %
+    </div>
+  </div>
+
+  <div class="input-form">
+    Opacity
+    <mat-slider
+    [(ngModel)]="bgOpacity"
+    min="0" max="100" step="1"
+    (input)="onInputChange($event)"
+    ></mat-slider>
+    <div class="inlinetext">
+      {{bgOpacity}} %
+    </div>
+  </div>
+
 
 </div>
