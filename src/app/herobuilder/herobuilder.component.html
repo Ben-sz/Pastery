@@ -7,14 +7,12 @@
       [ngStyle]="{
                    'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')'
                   }"
-                
-
                   bgColor
       >
       <div class="hero-text"  [ngStyle]="{
         'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px '
        }">
-        Serenity
+        {{heroText}}
       </div>
     </div>
 
@@ -28,18 +26,13 @@
 <div class="input-wrapper">
   <div class="input-left">
     <div class="input-form">
-      <div class="input-title">
-       Opacity
-      </div>
-      <mat-slider
-        [(ngModel)]="bgOpacity"
-        min="0" max="100" step="1"
-        (input)="bgOpacityChange($event)"
-      ></mat-slider>
+       <div class="input-title">
+       Text
+      </div> 
+      <mat-form-field class="example-full-width thinwhite">
+        <input matInput [(ngModel)]="heroText" >
+      </mat-form-field>
   
-      <div class="inlinetext">
-        {{bgOpacity}} %
-      </div>
     </div>
   
     <div class="input-form">
@@ -92,16 +85,19 @@
       <div class="input-title">
        Color
       </div>
-      <input [style.background]="bgColor"
-       [colorPicker]="bgColor"
+      <input style="width: 128px"
+      [style.background]="bgColor"
+      [cpAlphaChannel]="'disabled'"
+      [cpOutputFormat]="'rgba'"
+      [(colorPicker)]="bgColor"
        (colorPickerChange)="bgColor=$event"/>
        
-      <div class="inlinetext">
-        {{verticalPadding}} px
-      </div>
+      <!-- <div class="inlinetext">
+        {{bgColor}} px
+      </div> -->
     </div>
   
-    <div class="input-form">
+  <!--   <div class="input-form">
       <div class="input-title">
         Horizontal padding
       </div>
@@ -113,14 +109,11 @@
       <div class="inlinetext">
         {{horizontalPadding}} px
       </div>
-    </div>
+    </div> -->
 
   </div>
- 
 
-  <!-- background color -->
-  <!-- input text -->
-  <!-- input boxsize -->
+
 
 
 </div>

@@ -9,6 +9,8 @@ import { HerobuilderComponent } from './herobuilder/herobuilder.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,12 +28,15 @@ import { ColorPickerModule } from 'ngx-color-picker';
     AppRoutingModule,
     MatSliderModule,
     FormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    MatSliderModule
+    MatSliderModule,
+    MatInputModule
   ]
 })
 export class AppModule { }

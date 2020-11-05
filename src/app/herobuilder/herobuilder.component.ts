@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Rgba } from 'ngx-color-picker';
 
 
 @Component({
@@ -11,6 +12,7 @@ export class HerobuilderComponent implements OnInit {
   bgOpacity: number;
   horizontalPadding: number;
   verticalPadding: number;
+  heroText: string;
 
   bgColor: string;
   
@@ -19,6 +21,7 @@ export class HerobuilderComponent implements OnInit {
     this.horizontalPadding= 5;
     this.verticalPadding= 50;
     this.bgColor = '#000000cf';
+    this.heroText = "Serenity";
 
    }
 
