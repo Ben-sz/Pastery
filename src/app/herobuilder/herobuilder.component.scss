@@ -32,15 +32,8 @@
   font-size: 48px;
   font-weight: 900;
   line-height: 48px;
- /*  padding: 5px 50px; */
   border-color: white;
   border-style: solid;
- /*  border-width: 3px; */
-
-  /* border-width: 9px;
-border-style: solid;
-border-color: #1C6EA4; */
-
 }
 
 
@@ -48,7 +41,6 @@ border-color: #1C6EA4; */
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
   margin-top: 10px;
   margin-bottom: 10px;
 
@@ -68,11 +60,7 @@ border-color: #1C6EA4; */
 
     @media screen and (max-width:850px) {
       width: 90vw;
-     
-  
-  
     }
-
 
     .input-form{
       display: flex;
@@ -80,8 +68,6 @@ border-color: #1C6EA4; */
       max-width: 400px;
 
        @media screen and (max-width:850px) {
-       /*  width: 100%; */
-        /* max-width: ; */
         margin-right: auto;
       }
 
