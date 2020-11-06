@@ -13,7 +13,6 @@ export class HerobuilderComponent implements OnInit {
   horizontalPadding: number;
   verticalPadding: number;
   heroText: string;
-
   bgColor: string;
   
   constructor() {
