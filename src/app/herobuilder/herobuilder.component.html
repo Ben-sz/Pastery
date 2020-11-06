@@ -143,9 +143,22 @@
         align-items: center; 
         }
         <br><br>
-        .hero-wrapper {{ "{"}}
-          width: 100%;
-        }<br><br>
+
+
+        .hero-text{{"{"}}
+          <BLOCKQUOTE> 
+          color: white;  <br>
+          font-size: 48px;  <br>
+          line-height: 48px;  <br>
+          font-weight: 900;  <br>
+          border-color: white; <br>
+          border-style: solid; <br>
+          border-width: {{ borderWidth}}px <br>
+          padding: {{this.verticalPadding}}px {{this.horizontalPadding}}px; <br>
+          border-style: solid; 
+        </BLOCKQUOTE>
+        
+        } <br><br>
 
         .hero-container {{ "{"}}
            position: relative;
@@ -166,6 +179,7 @@
             </BLOCKQUOTE>
         }
         
+
 
       </h3>
     </div>
