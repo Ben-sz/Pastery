@@ -10,7 +10,7 @@
                   bgColor
       >
       <div class="hero-text"  [ngStyle]="{
-        'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px '
+        'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px ', 'border-width': this.borderWidth + 'px'
        }">
         {{heroText}}
       </div>
@@ -55,6 +55,21 @@
       ></mat-slider>
       <div class="inlinetext">
         {{horizontalPadding}} px
+      </div>
+    </div>
+
+
+    <div class="input-form">
+      <div class="input-title">
+        Border width
+      </div>
+      <mat-slider
+      [(ngModel)]="borderWidth"
+      min="0" max="20" step="1"
+      (input)="borderWChange($event)"
+      ></mat-slider>
+      <div class="inlinetext">
+        {{borderWidth}} px
       </div>
     </div>
 
@@ -141,13 +156,10 @@
 
         .hero-layer {{ "{"}}
             <BLOCKQUOTE> 
-            background-size: cover!important; <br>
-            width: 100%; <br>
             height: 400px;  <br>
             background-image:   url("../../assets/cow-hero.jpg"); <br>
             background-color: rgba(0,0,0,{{ bgOpacity/ 100}}) <br>
             background-blend-mode: darken; <br>
-            background-clip: border-box; <br>
             background-position-x: 50%; <br>
             background-position-y: 50%; <br>
             background-size: cover; 

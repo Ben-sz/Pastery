@@ -12,6 +12,7 @@ export class HerobuilderComponent implements OnInit {
   bgOpacity: number;
   horizontalPadding: number;
   verticalPadding: number;
+  borderWidth: number;
   heroText: string;
   bgColor: string;
 
@@ -32,11 +33,11 @@ export class HerobuilderComponent implements OnInit {
   
   constructor() {
     this.bgOpacity= 50;
-    this.horizontalPadding= 5;
-    this.verticalPadding= 50;
+    this.horizontalPadding= 50;
+    this.verticalPadding= 30;
     this.bgColor = '#000000cf';
     this.heroText = "Serenity";
-
+    this.borderWidth = 3;
    }
 
   ngOnInit(): void {
@@ -54,6 +55,10 @@ export class HerobuilderComponent implements OnInit {
 
   hPaddingChange(event) {
     this.horizontalPadding = event.value;
+  }
+
+  borderWChange(event) {
+    this.borderWidth = event.value;
   }
 
 
