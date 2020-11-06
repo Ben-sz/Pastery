@@ -14,6 +14,21 @@ export class HerobuilderComponent implements OnInit {
   verticalPadding: number;
   heroText: string;
   bgColor: string;
+
+  htmlStr: string = `<div class="hero-wrapper">
+                      <div class="hero-container">
+                      <div class="box hero-layer">
+      <div class="hero-text">
+        {{heroText}}
+      </div>
+    </div>
+  </div>
+</div>`
+
+;
+
+
+  
   
   constructor() {
     this.bgOpacity= 50;
