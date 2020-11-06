@@ -16,17 +16,7 @@ export class HerobuilderComponent implements OnInit {
   heroText: string;
   bgColor: string;
 
-  htmlStr: string = `<div class="hero-wrapper">
-                      <div class="hero-container">
-                      <div class="box hero-layer">
-      <div class="hero-text">
-        {{heroText}}
-      </div>
-    </div>
-  </div>
-</div>`
-
-;
+  htmlStr: string;
 
 
   
@@ -38,6 +28,18 @@ export class HerobuilderComponent implements OnInit {
     this.bgColor = '#000000cf';
     this.heroText = "Serenity";
     this.borderWidth = 3;
+
+    this.htmlStr = `<div class="hero-wrapper">
+                      <div class="hero-container">
+                      <div class="box hero-layer">
+      <div class="hero-text">
+      ` +
+        this.heroText +
+     `
+     </div>
+    </div>
+  </div>
+</div>`
    }
 
   ngOnInit(): void {
