@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Rgba } from 'ngx-color-picker';
-
+import {ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-herobuilder',
@@ -15,13 +15,12 @@ export class HerobuilderComponent implements OnInit {
   borderWidth: number;
   heroText: string;
   bgColor: string;
+  csscodeToCopy: string;
 
   htmlStr: string;
 
-
-  
-  
   constructor() {
+
     this.bgOpacity= 50;
     this.horizontalPadding= 50;
     this.verticalPadding= 30;
@@ -29,18 +28,25 @@ export class HerobuilderComponent implements OnInit {
     this.heroText = "Serenity";
     this.borderWidth = 3;
 
-    this.htmlStr = `<div class="hero-wrapper">
-                      <div class="hero-container">
-                      <div class="box hero-layer">
-      <div class="hero-text">
-      ` +
-        this.heroText +
-     `
-     </div>
-    </div>
-  </div>
-</div>`
-   }
+    this.htmlStr = 
+  `<{{'&lt;'}}>div class=&quot;hero-wrapper&quot;&gt;
+    {{'&lt;'}} div class=&quot;hero-container&quot;&gt;
+  
+      {{'&lt;'}} div class=&quot;box hero-layer&quot;&gt;
+  
+        {{'&lt;'}} div class=&quot;hero-text&quot;&gt;
+  
+        {{this.heroText}}
+  
+        {{'&lt;'}} /div&gt;
+  
+       {{'&lt;'}} /div&gt;
+  
+     {{'&lt;'}} /div&gt;
+     
+   {{'&lt;'}} /div&gt;
+   `
+}
 
   ngOnInit(): void {
   }
@@ -67,4 +73,10 @@ export class HerobuilderComponent implements OnInit {
   onChangeColor(color: string): void {
     console.log('Color changed:', color);
   }
+
+
+  setCopyText(code){
+  this.csscodeToCopy = code.innerHTML;
+  return this.csscodeToCopy
+  } 
 }

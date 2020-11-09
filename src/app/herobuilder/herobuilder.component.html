@@ -119,13 +119,39 @@
   <div class="code-container">
     <div class="code-type">
       HTML
+
+      <a class="material-icons" [cdkCopyToClipboard]="setCopyText(htmlcode)" style="margin-right: 10px; display: inline-flex;
+      vertical-align: middle; cursor: pointer; font-size: 20px;">
+        content_copy
+    </a>
     </div>
+
+    
 
     <div   class="code-text">
 
+    <!--   <h3 [innerText]="htmlStr"></h3> -->
 
-      <h3 [innerText]="htmlStr"></h3>
+    <pre>
+      <code  #htmlcode innerHTML="{{'&lt;'}}div class=&quot;hero-wrapper&quot;&gt;
+  {{'&lt;'}} div class=&quot;hero-container&quot;&gt;
 
+    {{'&lt;'}} div class=&quot;box hero-layer&quot;&gt;
+
+      {{'&lt;'}} div class=&quot;hero-text&quot;&gt;
+
+      {{this.heroText}}
+
+      {{'&lt;'}} /div&gt;
+
+     {{'&lt;'}} /div&gt;
+
+   {{'&lt;'}} /div&gt;
+   
+ {{'&lt;'}} /div&gt;"
+ >
+  </code>
+    </pre>
 
     </div>
   </div>
@@ -133,55 +159,58 @@
   <div class="code-container">
     <div class="code-type">
       CSS
+      <a class="material-icons" [cdkCopyToClipboard]="setCopyText(csscode)" style="margin-right: 10px; display: inline-flex;
+      vertical-align: middle; cursor: pointer; font-size: 20px;">
+        content_copy
+      </a>
+
     </div>
 
-    <div NgNonBindable class="code-text">
-      <h3 >
-        .box {{ "{"}}
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        }
-        <br><br>
+    <div class="code-text">
+ 
+      
+        <pre>
+          <code #csscode 
+innerHTML="
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  .hero-text{
+    color: white;  
+    font-size: 48px;  
+    line-height: 48px;  
+    font-weight: 900;  
+    border-color: white; 
+    border-style: solid; 
+    border-width: {{ borderWidth}}px 
+    padding: {{this.verticalPadding}}px {{this.horizontalPadding}}px; 
+    border-style: solid; 
+  } 
+  .hero-container {
+    position: relative;
+  }
+  img {
+    width: 100%;
+  }
+
+  .hero-layer{
+    height: 400px;  
+    background-image:   url('../../assets/cow-hero.jpg'); 
+    background-color: rgba(0,0,0,{{this.bgOpacity/100}} ) 
+    background-blend-mode: darken; 
+    background-position-x: 50%; 
+    background-position-y: 50%; 
+    background-size: cover; 
+  }
+          ">
+ </code>
+
+         
+        </pre>
 
 
-        .hero-text{{"{"}}
-          <BLOCKQUOTE> 
-          color: white;  <br>
-          font-size: 48px;  <br>
-          line-height: 48px;  <br>
-          font-weight: 900;  <br>
-          border-color: white; <br>
-          border-style: solid; <br>
-          border-width: {{ borderWidth}}px <br>
-          padding: {{this.verticalPadding}}px {{this.horizontalPadding}}px; <br>
-          border-style: solid; 
-        </BLOCKQUOTE>
-        
-        } <br><br>
-
-        .hero-container {{ "{"}}
-           position: relative;
-        }<br><br>
-        img {{ "{"}}
-            width: 100%;
-        }<br><br>
-
-        .hero-layer {{ "{"}}
-            <BLOCKQUOTE> 
-            height: 400px;  <br>
-            background-image:   url("../../assets/cow-hero.jpg"); <br>
-            background-color: rgba(0,0,0,{{ bgOpacity/ 100}}) <br>
-            background-blend-mode: darken; <br>
-            background-position-x: 50%; <br>
-            background-position-y: 50%; <br>
-            background-size: cover; 
-            </BLOCKQUOTE>
-        }
-        
-
-
-      </h3>
     </div>
   </div>
 
