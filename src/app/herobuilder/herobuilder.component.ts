@@ -17,6 +17,8 @@ export class HerobuilderComponent implements OnInit {
   bgColor: string;
   csscodeToCopy: string;
   heroFontSize: number;
+  bgXPos: number;
+  bgYPos: number;
 
   htmlStr: string;
 
@@ -29,6 +31,8 @@ export class HerobuilderComponent implements OnInit {
     this.heroText = "Serenity";
     this.borderWidth = 3;
     this.heroFontSize = 48;
+    this.bgXPos = 50;
+    this.bgYPos = 50;
 
 
    /*  this.htmlStr = 

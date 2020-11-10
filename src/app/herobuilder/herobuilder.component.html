@@ -82,7 +82,7 @@
       </div>
       <mat-slider
       [(ngModel)]="heroFontSize"
-      min="10" max="100" step="2"
+      min="10" max="200" step="2"
       (input)="fontSizeChange($event)"
       ></mat-slider>
       <div class="inlinetext">
@@ -118,6 +118,37 @@
       [cpOutputFormat]="'rgba'"
       [(colorPicker)]="bgColor"
        (colorPickerChange)="bgColor=$event"/>
+       
+    </div>
+
+    <div class="input-form">
+        <div class="input-title">
+         X position
+        </div>
+        <mat-slider
+          [(ngModel)]="bgXPos"
+          min="0" max="100" step="1"
+          (input)="bgOpacityChange($event)"
+        ></mat-slider>
+
+        <div class="inlinetext">
+          {{bgXPos}} %
+        </div>
+       
+    </div>
+
+    <div class="input-form">
+        <div class="input-title">
+         Y position
+        </div>
+        <mat-slider
+          [(ngModel)]="bgYPos"
+          min="0" max="100" step="1"
+          (input)="bgOpacityChange($event)"
+        ></mat-slider>
+        <div class="inlinetext">
+          {{bgYPos}} %
+        </div>
        
     </div>
   
