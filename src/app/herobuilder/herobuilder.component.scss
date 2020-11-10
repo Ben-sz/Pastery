@@ -152,6 +152,9 @@
   }
 }
 
+::ng-deep .mat-form-field-infix{
+border-top: .4em solid transparent;
+}
 .code-wrapper{
   display: flex;
   justify-content: center;
