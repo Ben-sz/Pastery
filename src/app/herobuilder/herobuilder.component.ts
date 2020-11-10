@@ -16,6 +16,7 @@ export class HerobuilderComponent implements OnInit {
   heroText: string;
   bgColor: string;
   csscodeToCopy: string;
+  heroFontSize: number;
 
   htmlStr: string;
 
@@ -27,8 +28,10 @@ export class HerobuilderComponent implements OnInit {
     this.bgColor = '#000000cf';
     this.heroText = "Serenity";
     this.borderWidth = 3;
+    this.heroFontSize = 48;
 
-    this.htmlStr = 
+
+   /*  this.htmlStr = 
   `<{{'&lt;'}}>div class=&quot;hero-wrapper&quot;&gt;
     {{'&lt;'}} div class=&quot;hero-container&quot;&gt;
   
@@ -45,7 +48,7 @@ export class HerobuilderComponent implements OnInit {
      {{'&lt;'}} /div&gt;
      
    {{'&lt;'}} /div&gt;
-   `
+   ` */
 }
 
   ngOnInit(): void {
@@ -67,6 +70,10 @@ export class HerobuilderComponent implements OnInit {
 
   borderWChange(event) {
     this.borderWidth = event.value;
+  }
+
+  fontSizeChange(event){
+    this.heroFontSize = event.value;
   }
 
 

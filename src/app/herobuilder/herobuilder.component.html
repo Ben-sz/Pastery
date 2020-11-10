@@ -10,7 +10,9 @@
                   bgColor
       >
       <div class="hero-text"  [ngStyle]="{
-        'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px ', 'border-width': this.borderWidth + 'px'
+        'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px ', 'border-width': this.borderWidth + 'px',
+        'font-size': heroFontSize + 'px',
+        'line-height': (heroFontSize) + 'px'
        }">
         {{heroText}}
       </div>
@@ -21,7 +23,7 @@
 <div class="input-wrapper">
   <div class="input-left">
     <div class="input-form">
-       <div class="input-title">
+       <div class="input-title"  >
        Text
       </div> 
       <mat-form-field class="example-full-width thinwhite">
@@ -70,6 +72,21 @@
       ></mat-slider>
       <div class="inlinetext">
         {{borderWidth}} px
+      </div>
+    </div>
+
+
+    <div class="input-form">
+      <div class="input-title">
+        Font Size
+      </div>
+      <mat-slider
+      [(ngModel)]="heroFontSize"
+      min="10" max="100" step="2"
+      (input)="fontSizeChange($event)"
+      ></mat-slider>
+      <div class="inlinetext">
+        {{heroFontSize}} px
       </div>
     </div>
 
