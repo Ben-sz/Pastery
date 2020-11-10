@@ -5,7 +5,9 @@
   
     <div class="box hero-layer"
       [ngStyle]="{
-                   'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')'
+                   'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')',
+                   'background-position-x':  bgXPos +'%',
+                   'background-position-y':  bgYPos +'%'
                   }"
                   bgColor
       >
@@ -126,9 +128,9 @@
          X position
         </div>
         <mat-slider
-          [(ngModel)]="bgXPos"
           min="0" max="100" step="1"
-          (input)="bgOpacityChange($event)"
+          value="50"
+          (input)="bgXPosChange($event)"
         ></mat-slider>
 
         <div class="inlinetext">
@@ -142,9 +144,9 @@
          Y position
         </div>
         <mat-slider
-          [(ngModel)]="bgYPos"
           min="0" max="100" step="1"
-          (input)="bgOpacityChange($event)"
+          value="50"
+          (input)="bgYPosChange($event)"
         ></mat-slider>
         <div class="inlinetext">
           {{bgYPos}} %

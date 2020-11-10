@@ -80,7 +80,14 @@ export class HerobuilderComponent implements OnInit {
     this.heroFontSize = event.value;
   }
 
+  bgXPosChange(event){
+    this.bgXPos = event.value;
+  }
 
+  bgYPosChange(event){
+    this.bgYPos = event.value;
+  }
+  
   onChangeColor(color: string): void {
     console.log('Color changed:', color);
   }
