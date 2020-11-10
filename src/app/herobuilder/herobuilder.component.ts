@@ -19,6 +19,7 @@ export class HerobuilderComponent implements OnInit {
   heroFontSize: number;
   bgXPos: number;
   bgYPos: number;
+  heroHeight: number;
 
   htmlStr: string;
 
@@ -33,6 +34,7 @@ export class HerobuilderComponent implements OnInit {
     this.heroFontSize = 48;
     this.bgXPos = 50;
     this.bgYPos = 50;
+    this.heroHeight = 400;
 
 
    /*  this.htmlStr = 
@@ -78,6 +80,10 @@ export class HerobuilderComponent implements OnInit {
 
   fontSizeChange(event){
     this.heroFontSize = event.value;
+  }
+
+  heightChange(event){
+    this.heroHeight = event.value;
   }
 
   bgXPosChange(event){

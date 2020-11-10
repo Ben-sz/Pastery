@@ -7,7 +7,8 @@
       [ngStyle]="{
                    'background-color': 'rgba(0,0,0,'+ (bgOpacity/ 100) +')',
                    'background-position-x':  bgXPos +'%',
-                   'background-position-y':  bgYPos +'%'
+                   'background-position-y':  bgYPos +'%',
+                   'height': heroHeight + 'px'
                   }"
                   bgColor
       >
@@ -123,6 +124,25 @@
        
     </div>
 
+
+
+    <div class="input-form">
+      <div class="input-title">
+       Height
+      </div>
+      <mat-slider
+        min="100" max="650" step="1"
+        value="400"
+        (input)="heightChange($event)"
+      ></mat-slider>
+
+      <div class="inlinetext">
+        {{heroHeight}} px
+      </div>
+     
+  </div>
+
+
     <div class="input-form">
         <div class="input-title">
          X position
@@ -229,13 +249,13 @@ innerHTML="
   }
   .hero-text{
     color: white;  
-    font-size: 48px;  
-    line-height: 48px;  
+    font-size: {{heroFontSize}}px;  
+    line-height: {{heroFontSize}}px; 
     font-weight: 900;  
     border-color: white; 
     border-style: solid; 
     border-width: {{ borderWidth}}px 
-    padding: {{this.verticalPadding}}px {{this.horizontalPadding}}px; 
+    padding: {{verticalPadding}}px {{horizontalPadding}}px; 
     border-style: solid; 
   } 
   .hero-container {
@@ -246,12 +266,12 @@ innerHTML="
   }
 
   .hero-layer{
-    height: 400px;  
+    height: {{heroHeight}}px;  
     background-image:   url('../../assets/cow-hero.jpg'); 
-    background-color: rgba(0,0,0,{{this.bgOpacity/100}} ) 
+    background-color: rgba(0,0,0,{{bgOpacity/100}} ) 
     background-blend-mode: darken; 
-    background-position-x: 50%; 
-    background-position-y: 50%; 
+    background-position-x: {{bgXPos}}%; 
+    background-position-y: {{bgYPos}}%; 
     background-size: cover; 
   }
           ">
