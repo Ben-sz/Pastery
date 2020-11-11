@@ -33,7 +33,7 @@ export class HerobuilderComponent implements OnInit {
     this.borderWidth = 3;
     this.heroFontSize = 48;
     this.bgXPos = 50;
-    this.bgYPos = 50;
+    this.bgYPos = 63;
     this.heroHeight = 400;
 
 

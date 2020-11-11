@@ -10,7 +10,7 @@
                    'background-position-y':  bgYPos +'%',
                    'height': heroHeight + 'px'
                   }"
-                  bgColor
+                  
       >
       <div class="hero-text"  [ngStyle]="{
         'padding': this.verticalPadding + 'px ' + this.horizontalPadding + 'px ', 'border-width': this.borderWidth + 'px',
@@ -266,8 +266,8 @@ innerHTML="
   }
 
   .hero-layer{
-    height: {{heroHeight}}px;  
-    background-image:   url('../../assets/cow-hero.jpg'); 
+    height: {{heroHeight}}px; ;
+    background-image:   url('https://images.unsplash.com/photo-1500139223203-01825c8badf2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1997&q=80'); 
     background-color: rgba(0,0,0,{{this.bgOpacity/100}} ) 
     background-blend-mode: darken; 
     background-position-x: {{bgXPos}}%; 

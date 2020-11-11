@@ -1,1 +1,34 @@
-<p>buttonbuilder works!</p>
+
+<div class="button-wrapper"
+  [ngStyle]="{ 'background-color':bgColor
+              }" 
+ >
+
+  <div class="buttonbuild"
+                        [ngStyle]="{ 'border-color': borderColor,
+                                    'border-width': borderwidth + 'px',
+                                    'border-radius': borderRadius + 'px',
+                                    'padding': padding + 'px',
+                                    'font-size': fontSize + 'px'
+                      }" 
+  >
+                      {{buttonText}}
+
+  </div>
+</div>
+
+
+
+<div class="input-wrapper">
+  <div class="input-left">
+    <div class="input-form">
+       <div class="input-title"  >
+       Text
+      </div> 
+      <mat-form-field class="example-full-width thinwhite">
+        <input matInput [(ngModel)]="buttonText" >
+      </mat-form-field>
+  
+    </div>
+  </div>
+</div>

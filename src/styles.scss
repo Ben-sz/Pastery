@@ -21,3 +21,99 @@ html{
   margin: 0;
 }
 
+.input-left{
+  margin: 5px;
+  max-width: 420px;
+  color: #ffd740;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(0,0,0,0.1);
+
+  @media screen and (max-width:850px) {
+    width: 90vw;
+  }
+
+  .input-form{
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+
+     @media screen and (max-width:850px) {
+      margin-right: auto;
+    }
+
+
+    @media screen and (max-width:430px) {
+      
+     /*  margin-left: 15vw;
+      margin-right: 15vw; */
+      flex-direction: column;
+      justify-content: center;
+    /*   align-items: center; */
+      margin: auto;
+
+      padding-left: auto;
+      padding-right: auto;
+    }
+  }
+}
+
+
+.input-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+}
+
+.input-title{
+  height: 48px;
+  line-height: 48px;
+  width: 250px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 16px;
+
+
+  @media screen and (max-width:850px) {
+    width: 180px;
+  }
+
+  @media screen and (max-width:430px) {
+
+     margin-left: auto;
+     margin-right: auto;
+    text-align: center;
+    margin-bottom: -20px;
+   }
+}
+
+
+
+::ng-deep input.mat-input-element {
+  color: white;
+}
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #ffd740 !important;
+}
+
+
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.55em;
+  @media screen and (max-width:430px) {
+   margin-bottom: 1em;
+  }
+}
+
+::ng-deep .mat-form-field-infix{
+border-top: .4em solid transparent;
+}
