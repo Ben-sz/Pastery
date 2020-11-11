@@ -36,25 +36,6 @@ export class HerobuilderComponent implements OnInit {
     this.bgYPos = 63;
     this.heroHeight = 400;
 
-
-   /*  this.htmlStr = 
-  `<{{'&lt;'}}>div class=&quot;hero-wrapper&quot;&gt;
-    {{'&lt;'}} div class=&quot;hero-container&quot;&gt;
-  
-      {{'&lt;'}} div class=&quot;box hero-layer&quot;&gt;
-  
-        {{'&lt;'}} div class=&quot;hero-text&quot;&gt;
-  
-        {{this.heroText}}
-  
-        {{'&lt;'}} /div&gt;
-  
-       {{'&lt;'}} /div&gt;
-  
-     {{'&lt;'}} /div&gt;
-     
-   {{'&lt;'}} /div&gt;
-   ` */
 }
 
   ngOnInit(): void {
