@@ -28,7 +28,69 @@
       <mat-form-field class="example-full-width thinwhite">
         <input matInput [(ngModel)]="buttonText" >
       </mat-form-field>
-  
     </div>
+
+    <div class="input-form">
+      <div class="input-title">
+       Padding
+      </div>
+      <mat-slider
+      [(ngModel)]="padding"
+      (input)="padding = $event.value"
+      min="0" max="30" step="1"
+
+      ></mat-slider>
+      <div class="inlinetext">
+        {{padding}} px
+      </div>
+    </div>
+
+    <div class="input-form">
+      <div class="input-title">
+       Font size
+      </div>
+      <mat-slider
+      [(ngModel)]="fontSize"
+      (input)="fontSize = $event.value"
+      min="4" max="300" step="1"
+
+      ></mat-slider>
+      <div class="inlinetext">
+        {{fontSize}} px
+      </div>
+    </div>
+
+
+    <div class="input-form">
+      <div class="input-title">
+       Border radius
+      </div>
+      <mat-slider
+      [(ngModel)]="borderRadius"
+      (input)="borderRadius = $event.value"
+      min="0" max="250" step="1"
+
+      ></mat-slider>
+      <div class="inlinetext">
+        {{borderRadius}} px
+      </div>
+    </div>
+
+    <div class="input-form">
+      <div class="input-title">
+       Border width
+      </div>
+      <mat-slider
+      [(ngModel)]="borderwidth"
+      (input)="borderwidth = $event.value"
+      min="0" max="30" step="1"
+
+      ></mat-slider>
+      <div class="inlinetext">
+        {{borderwidth}} px
+      </div>
+    </div>
+
+
   </div>
 </div>
