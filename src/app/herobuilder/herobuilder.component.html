@@ -41,8 +41,9 @@
       </div>
       <mat-slider
       [(ngModel)]="verticalPadding"
+      (input)="verticalPadding = $event.value"
       min="0" max="200" step="1"
-      (input)="vPaddingChange($event)"
+
       ></mat-slider>
       <div class="inlinetext">
         {{verticalPadding}} px
@@ -55,8 +56,8 @@
       </div>
       <mat-slider
       [(ngModel)]="horizontalPadding"
+      (input)="horizontalPadding= $event.value"
       min="0" max="200" step="1"
-      (input)="hPaddingChange($event)"
       ></mat-slider>
       <div class="inlinetext">
         {{horizontalPadding}} px
@@ -70,8 +71,8 @@
       </div>
       <mat-slider
       [(ngModel)]="borderWidth"
+      (input)="borderWidth= $event.value"
       min="0" max="20" step="1"
-      (input)="borderWChange($event)"
       ></mat-slider>
       <div class="inlinetext">
         {{borderWidth}} px
@@ -85,8 +86,8 @@
       </div>
       <mat-slider
       [(ngModel)]="heroFontSize"
+      (input)="heroFontSize= $event.value"
       min="10" max="200" step="2"
-      (input)="fontSizeChange($event)"
       ></mat-slider>
       <div class="inlinetext">
         {{heroFontSize}} px
@@ -102,8 +103,8 @@
       </div>
       <mat-slider
         [(ngModel)]="bgOpacity"
+        (input)="bgOpacity= $event.value"
         min="0" max="100" step="1"
-        (input)="bgOpacityChange($event)"
       ></mat-slider>
   
       <div class="inlinetext">
@@ -132,8 +133,8 @@
       </div>
       <mat-slider
         min="100" max="650" step="1"
-        value="400"
-        (input)="heightChange($event)"
+        [(ngModel)]="heroHeight"
+        (input)="heroHeight= $event.value"
       ></mat-slider>
 
       <div class="inlinetext">
@@ -149,8 +150,8 @@
         </div>
         <mat-slider
           min="0" max="100" step="1"
-          value="50"
-          (input)="bgXPosChange($event)"
+          [(ngModel)]="bgXPos"
+          (input)="bgXPos= $event.value"
         ></mat-slider>
 
         <div class="inlinetext">
@@ -165,8 +166,8 @@
         </div>
         <mat-slider
           min="0" max="100" step="1"
-          value="50"
-          (input)="bgYPosChange($event)"
+          [(ngModel)]="bgYPos"
+          (input)="bgYPos= $event.value"
         ></mat-slider>
         <div class="inlinetext">
           {{bgYPos}} %
